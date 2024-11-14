@@ -1,0 +1,16 @@
+git remote add subtree https://github.com/user/my-subtree.git
+git fetch subtree
+git subtree add subtree master --prefix=my-subtree/
+
+git remote add subtree https://github.com/swmuir/gov-onc-sml-fhir
+
+# Add a subproject as a subtree
+git subtree add --prefix=subproject-folder subproject main --squash
+
+# Pull updates from the subproject
+git subtree pull --prefix=subproject-folder subproject main --squash
+
+# Push updates to the subproject
+git subtree push --prefix=subproject-folder subproject main
+
+
